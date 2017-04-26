@@ -8,3 +8,6 @@
   - name: OPS Specs
     tocHref: /CATS_Document/specdocs/
     topicHref: /CATS_Document/specdocs/index
+  - name: reference
+    tocHref: /CATS_Document/
+    topicHref: /CATS_Document/reference
