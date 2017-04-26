@@ -8,4 +8,4 @@
 ## [CATS Environment Deploy](docs-content-e2e/CATS-Environment-Deploy.md)
 ### [How to deploy CATS debug machine](docs-content-e2e/How-to-deploy-CATS-debug-machine.md)
 # OPS Spec
-## [Compete](research/compete.md)
+## [New repo](specdocs/NewRepo.md)
