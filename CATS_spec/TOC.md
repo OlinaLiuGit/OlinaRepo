@@ -7,5 +7,4 @@
 ### [Code Snippet Case](docs-content-e2e/Code-Snippet-Case.md)
 ## [CATS Environment Deploy](docs-content-e2e/CATS-Environment-Deploy.md)
 ### [How to deploy CATS debug machine](docs-content-e2e/How-to-deploy-CATS-debug-machine.md)
-# OPS Spec
-## [New repo](specdocs/NewRepo.md)
+# [Spec docs](specdocs/NewRepo.md)
