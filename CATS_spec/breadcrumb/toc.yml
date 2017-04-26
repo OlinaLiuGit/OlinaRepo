@@ -1,0 +1,10 @@
+- name: CATS documentation
+  tocHref: /CATS_Document/
+  topicHref: /CATS_Document/index
+  items:
+  - name: CATS documentation
+    tocHref: /CATS_Document/
+    topicHref: /CATS_Document/e2e-test-coverage-overview
+  - name: OPS Specs
+    tocHref: /CATS_Document/specdocs/
+    topicHref: /CATS_Document/specdocs/index

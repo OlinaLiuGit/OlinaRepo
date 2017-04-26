@@ -3,7 +3,7 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md", "**/toc.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -29,7 +29,9 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+	"breadcrumb_path": "/CATS_Document/breadcrumb/toc.json",
+	},
     "fileMetadata": {},
     "template": [],
     "dest": "CATS_Document"
