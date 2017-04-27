@@ -1,4 +1,4 @@
-# OPS and Docs E2E Testing
+# [OPS and Docs E2E Testing](index.md)
 ## [Introduction OPS/Docs E2E Testing](introduction-ops-docs-e2e-testing.md)
 ### [E2E test coverage overview](e2e-test-coverage-overview.md)
 ### [Ownership or Contact, permission management](connect.md)
@@ -30,7 +30,7 @@
 ### [How to deploy a debug machine](docs-content-e2e/How-to-deploy-CATS-debug-machine.md)
 ### [How to deploy CATS to website](docs-content-e2e/How-to-deploy-CATS-website.md)
 ### [How to deploy CATS DB](docs-content-e2e/How-to-deploy-CATS-DB.md)
-# Spec docs
-## [Spec docs](specdocs/NewRepo.md)
-# Reference
-## [reference](reference.md)
+## Spec docs
+### [Spec docs](specdocs/NewRepo.md)
+## Reference
+### [reference](reference.md)
