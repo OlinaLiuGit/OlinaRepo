@@ -28,16 +28,14 @@ To render the above list, you would write the following Markdown:
 ## Next Steps
 We're rolling out a new Markdown extension targeted at providing a consistent way for writers to show "next steps" at the end of their articles. Here's an example:
 
-> [!NEXT]
-> Next step content, [sometimes blue](http://docs.microsoft.com), sometimes not.
-> Lorem ipsum dolor sit amet, [consectetur adipisicing elit](http://docs.microsoft.com).
+> [!div class="nextstepaction"]
+> [Next article name](http://docs.microsoft.com)
 
 To render the above block, you would write the following Markdown:
 
 ```Markdown
-> [!NEXT]
-> Next step content, [sometimes blue](http://docs.microsoft.com), sometimes not.
-> Lorem ipsum dolor sit amet, [consectetur adipisicing elit](http://docs.microsoft.com).
+> [!div class="nextstepaction"]
+> [Next article name](http://docs.microsoft.com)
 ```
 
 ## Azure Cli Code sample
