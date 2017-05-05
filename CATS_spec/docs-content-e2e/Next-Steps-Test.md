@@ -7,7 +7,7 @@ The Next Steps contain below test case
 
 ### Next step with internal link(External repo)
 > [!div class="nextstepaction"]
-> [Create and Manage VM disks](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-disks)
+> [Create and Manage VM disks test test test test](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-disks)
 
 
 ### Next step with internal link(Current repo)
