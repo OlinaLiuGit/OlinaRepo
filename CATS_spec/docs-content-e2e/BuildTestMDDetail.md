@@ -158,7 +158,7 @@
 > [!div class="checklist"] 
 > * This item contains a keyword `Hello word`
 > * The next line is code sample
-> * 
+> * Here is a code sample
 ```
 using System;
 
