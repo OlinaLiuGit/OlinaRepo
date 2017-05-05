@@ -50,11 +50,14 @@
 ## Verify lists item could nest order/unorder list
 
 > [!div class="checklist"]
-> * 1. Order list first line
+> * This is order list
+    1. Order list first line
     2. Order list second line
-> * * unorder list first line with *
+> * This is under list with *
+    * unorder list first line with *
     * unorder list second line with *
-> * + unorder list first line with +
+> * This is unorder list with +
+    + unorder list first line with +
     + unorder list second line with +
 
 ## Verify each item support link
@@ -63,18 +66,18 @@
 > * Internal Link: [Internal link BuildTest](BuildTest.md).
 > * Inline External Link: This is [Baidu](http://baidu.com/ "Baidu").
 > * Referenced external link: This is an [baidu][1] page.
-> * This is bookmark to [*Nest font format Bold and italics*](#Nest font format Bold and italics).
+> * This is bookmark to [*Nest font format Bold and italics*](#Nest-font-format-Bold-and-italics).
 
 [1]: http://baidu.com/
 
 ## Verify each item support image
 
 > [!div class="checklist"]
-> * Inline image: [Inline image](..\Images\IIS.png).
+> * Inline image: [Inline image](../Images/IIS.png).
 > * Reference image: [Inline image][2].
 > * External image: ![Image](http://pica.nipic.com/2008-01-09/200819134250665_2.jpg "Title")
 
-[2]: (..\Images\IIS.png)
+[2]: ../Images/IIS.png
 
 ## Verify each item support alert
 
@@ -91,7 +94,9 @@
     > This is Caution alert
     
 ## Verify each item support token
-TBD
+> [!div class="checklist"]
+> * [!INCLUDE[ATA](../token/ATA.md)
+> * For token
 
 ## Verify each item support table
 
@@ -125,15 +130,21 @@ using System;
 > * For `inline code`.
 
 ### For code snippet
-TBD
+> [!div class="checklist"] 
+> * The next line is code snippet
+> * [!Code-fsharp[snippetGetActions_fsharp](../CodeSnippets/tests.c)] 
+
 
 ## Verify each item support video
 ### External Video 
+> [!div class="checklist"]
 > * The next line is external video
-> * [DemoVideo](https://sec.ch9.ms/ch9/4ce4/817a99cc-24da-4689-83a8-bd5aa1c54ce4/VSToolboxContainers_high.mp4)
+> * [!VIDEO https://sec.ch9.ms/ch9/f882/07d5474f-4235-4d89-90bc-ed008b98f882/WAMFAAnnimated_high.mp4] 
 
 ### Internal video
-TBD
+> [!div class="checklist"]
+> * The next line is external video
+> * [!VIDEO ../Videos/Testvideo.mp4] 
 
 ## Verify items could support Mix embedded elements
 ### Mix Order list and external link
