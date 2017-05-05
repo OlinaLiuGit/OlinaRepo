@@ -14,7 +14,7 @@ A new style is now available for bulleted lists. You can render lists with check
 
 To render the above list, you would write the following Markdown:
 
-```markdown-interavtive
+```markdown-interactive
 > [!div class="checklist"]
 > * Log in to Azure
 > * Create a resource group
@@ -34,7 +34,7 @@ We're rolling out a new Markdown extension targeted at providing a consistent wa
 
 To render the above block, you would write the following Markdown:
 
-```markdown-interavtive
+```markdown-interactive
 > [!NEXT]
 > Next step content, [sometimes blue](http://docs.microsoft.com), sometimes not.
 > Lorem ipsum dolor sit amet, [consectetur adipisicing elit](http://docs.microsoft.com).
