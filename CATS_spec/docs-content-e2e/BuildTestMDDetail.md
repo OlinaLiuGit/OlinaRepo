@@ -132,7 +132,7 @@ using System;
 ### For code snippet
 > [!div class="checklist"] 
 > * The next line is code snippet
-> * [!Code-fsharp[snippetGetActions_fsharp](../CodeSnippets/tests.c)] 
+> * [!Code-fsharp[snippetGetActions_fsharp](../CodeSnippets/Testcode.c)] 
 
 
 ## Verify each item support video
