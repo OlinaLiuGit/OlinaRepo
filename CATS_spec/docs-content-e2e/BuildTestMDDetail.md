@@ -66,7 +66,7 @@
 > * Internal Link: [Internal link BuildTest](BuildTest.md).
 > * Inline External Link: This is [Baidu](http://baidu.com/ "Baidu").
 > * Referenced external link: This is an [baidu][1] page.
-> * This is bookmark to [*Nest font format Bold and italics*](#Nest-font-format-Bold-and-italics).
+> * This is bookmark to [*Nest font format Bold and italics*](#nest-font-format-Bold-and-italics).
 
 [1]: http://baidu.com/
 
