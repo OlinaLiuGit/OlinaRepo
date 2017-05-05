@@ -27,6 +27,7 @@
 ### [Page Width Test Cases](docs-content-e2e/Page-Width-Case.md)
 ## [Build Test](docs-content-e2e/BuildTest.md)
 ### [Next Steps Test](docs-content-e2e/Next-Steps-Test.md)
+### [BuildTestMDDetail](docs-content-e2e/BuildTestMDDetail.md)
 ## Spec docs
 ### [Spec docs](specdocs/NewRepo.md)
 ## Reference
