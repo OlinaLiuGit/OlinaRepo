@@ -105,15 +105,41 @@
 > [!NOTE]
 > abc I am a checkmark list
 > > [!div class="checklist"]
-> > * 
 > > * Create a resource group
 > > * Prepare the configuration
 > > * Create a virtual machine
 
+> [!WARNING]
+> abc I am a checkmark list
+> > [!div class="checklist"]
+> > * Create a resource group
+> > * Prepare the configuration
+> > * Create a virtual machine
+
+> [!TIP]
+> abc I am a checkmark list
+> > [!div class="checklist"]
+> > * Create a resource group
+> > * Prepare the configuration
+> > * Create a virtual machine
+
+> [!IMPORTANT]
+> abc I am a checkmark list
+> > [!div class="checklist"]
+> > * Create a resource group
+> > * Prepare the configuration
+> > * Create a virtual machine
+
+> [!CAUTION]
+> abc I am a checkmark list
+> > [!div class="checklist"]
+> > * Create a resource group
+> > * Prepare the configuration
+> > * Create a virtual machine
 
 ## Verify each item support token
 > [!div class="checklist"]
-> * [!INCLUDE[ATA](../token/ATA.md)
+> * [!INCLUDE[ATA](../token/ATA.md)]
 > * For token
 
 ## Verify each item support table
@@ -121,7 +147,8 @@
 > [!div class="checklist"] 
 > * Next line is table with MD format
 > * |Row1|Row2|
-    |Column1|Column2|
+|---|---|
+|Column1|Column2|
 
 ## Verify each item support code snippet 
 ### For code sample 
@@ -139,6 +166,7 @@ using System;
         Console.WriteLine("Hello World");
  }
 }
+```
 > * The previous line is code sample 
 
 ### For inline code
