@@ -26,6 +26,7 @@
 ### [Video Test Cases](docs-content-e2e/Video-Case.md)
 ### [Page Width Test Cases](docs-content-e2e/Page-Width-Case.md)
 ## [Build Test](docs-content-e2e/BuildTest.md)
+### [Next Steps Test](docs-content-e2e/Next-Steps-Test.md)
 ## Spec docs
 ### [Spec docs](specdocs/NewRepo.md)
 ## Reference
