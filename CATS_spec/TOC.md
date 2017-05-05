@@ -25,11 +25,7 @@
 ### [Table Test Cases](docs-content-e2e/Table-Case.md)
 ### [Video Test Cases](docs-content-e2e/Video-Case.md)
 ### [Page Width Test Cases](docs-content-e2e/Page-Width-Case.md)
-## [CATS Environment Deploy](docs-content-e2e/CATS-Environment-Deploy.md)
-### [How to deploy a test machine](docs-content-e2e/How-to-deploy-CATS-test-machine.md)
-### [How to deploy a debug machine](docs-content-e2e/How-to-deploy-CATS-debug-machine.md)
-### [How to deploy CATS to website](docs-content-e2e/How-to-deploy-CATS-website.md)
-### [How to deploy CATS DB](docs-content-e2e/How-to-deploy-CATS-DB.md)
+## [Build Test](docs-content-e2e/BuildTest.md)
 ## Spec docs
 ### [Spec docs](specdocs/NewRepo.md)
 ## Reference
