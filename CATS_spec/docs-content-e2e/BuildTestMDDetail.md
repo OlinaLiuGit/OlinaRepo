@@ -72,11 +72,11 @@
 
 ## Verify each item support image
 
-[Inline image](../Images/IIS.png).+
-[Inline image][3].
+![Inline image](../Images/IIS.png).
+![Inline image][3].
 > [!div class="checklist"]
-> * Inline image: [Inline image](../Images/IIS.png).
-> * Reference image: [Inline image][2].
+> * Inline image: ![Inline image](../Images/IIS.png).
+> * Reference image: ![Inline image][2].
 > * External image: ![Image](http://pica.nipic.com/2008-01-09/200819134250665_2.jpg "Title")
 
 [2]: ../Images/IIS.png
