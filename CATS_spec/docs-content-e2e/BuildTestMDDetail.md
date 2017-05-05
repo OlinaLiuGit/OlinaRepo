@@ -146,12 +146,10 @@
 
 > [!div class="checklist"] 
 > * Next line is table with MD format
-> * |Row1|Row2|
-> * |---|---|
-> * |Column1|Column2|
+> * |Row1|Row2|<br>|---|---|<br>|Column1|Column2|
 
 ## Verify table contains checkmark list
-| I am a table contains checkmark | Description          |
+| I am a table contains checkmark | Description|
 | ------------- | ----------- |
 | aaaa  |  bbbbb|
 |  > [!div class="checklist"] <br/> > * Check item 1 <br/> > * Check item 2 <br/> > * Check item 3 | 1. item1 <br> 2. Item2 <br> 3.    | 
@@ -164,10 +162,7 @@
 > * This item contains a keyword `Hello word`
 > * Here is a code sample ```using System;```
 > * Here is another code sample
-> * ```
-> * using System;
-> * using Microsoft.AnalysisServices.AdomdClient; 
-> * ```
+> * ``` <br> using System; <br> using Microsoft.AnalysisServices.AdomdClient;<br>```
 
 ### For inline code
 
@@ -180,12 +175,12 @@
 > * The next line is code snippet
 > * [!Code-fsharp[snippetGetActions_fsharp](../CodeSnippets/Testcode.c)] 
 
-
 ## Verify each item support video
 ### External Video 
 > [!div class="checklist"]
 > * The next line is external video
-> * [!VIDEO https://sec.ch9.ms/ch9/f882/07d5474f-4235-4d89-90bc-ed008b98f882/WAMFAAnnimated_high.mp4] 
+> * > [!VIDEO https://sec.ch9.ms/ch9/f882/07d5474f-4235-4d89-90bc-ed008b98f882/WAMFAAnnimated_high.mp4] 
+> * > [!VIDEO https://www.youtube.com/embed/iyT1uILEI2U]
 
 ### Internal video
 > [!div class="checklist"]
@@ -214,7 +209,8 @@
 
 
 ### Checklist in table (MD systax)
-|Row1|Row2|   
-|> [!div class="checklist"] 
-> * Next line is table with MD format
-|Column2|    
+|Row1|Row2|  
+|--|--|
+|> [!div class="checklist"] <br> > * Next line is table with MD format|Column2|    
+
+
