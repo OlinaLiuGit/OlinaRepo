@@ -72,12 +72,15 @@
 
 ## Verify each item support image
 
+[Inline image](../Images/IIS.png).+
+[Inline image][3].
 > [!div class="checklist"]
 > * Inline image: [Inline image](../Images/IIS.png).
 > * Reference image: [Inline image][2].
 > * External image: ![Image](http://pica.nipic.com/2008-01-09/200819134250665_2.jpg "Title")
 
 [2]: ../Images/IIS.png
+[3]: ../Images/IIS.png
 
 ## Verify each item support alert
 
@@ -162,7 +165,11 @@
 > * This item contains a keyword `Hello word`
 > * Here is a code sample ```using System;```
 > * Here is another code sample
-> * ``` <br> using System; <br> using Microsoft.AnalysisServices.AdomdClient;<br>```
+> * 
+```  
+using System; 
+using Microsoft.AnalysisServices.AdomdClient;
+```
 
 ### For inline code
 
