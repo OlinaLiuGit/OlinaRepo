@@ -151,15 +151,23 @@
 > * |Column1|Column2|
 
 ## Verify table contains checkmark list
+| I am a table contains checkmark | Description          |
+| ------------- | ----------- |
+| aaaa  |  bbbbb|
+|  > [!div class="checklist"] <br/> > * Check item 1 <br/> > * Check item 2 <br/> > * Check item 3 | 1. item1 <br> 2. Item2 <br> 3.    | 
+
 
 ## Verify each item support code snippet 
 ### For code sample 
 
 > [!div class="checklist"] 
 > * This item contains a keyword `Hello word`
-> * The next line is code sample
 > * Here is a code sample ```using System;```
-> * The previous line is code sample 
+> * Here is another code sample
+> * ```
+> * using System;
+> * using Microsoft.AnalysisServices.AdomdClient; 
+> * ```
 
 ### For inline code
 
