@@ -158,19 +158,7 @@
 > [!div class="checklist"] 
 > * This item contains a keyword `Hello word`
 > * The next line is code sample
-> * Here is a code sample
-```
-using System;
-
-  public class Demo
-{
- public void Main()
- {
-        Console.WriteLine("Hello World");
- }
-}
-```
-
+> * Here is a code sample ```using System;```
 > * The previous line is code sample 
 
 ### For inline code
