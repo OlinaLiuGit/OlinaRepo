@@ -45,3 +45,9 @@ When the feature is live on review, the following should display the enhanced co
 ```azurecli-interactive
 az group create --name myResourceGroup --location westeurope
 ``` 
+
+To render the above block, you would write the following Markdown:
+
+```azurecli-interactive
+az group create --name myResourceGroup --location westeurope
+``` 
