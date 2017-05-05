@@ -92,7 +92,25 @@
     > This is Important alert
 > * > [!CAUTION] 
     > This is Caution alert
-    
+
+## Verify each item support alert2
+> [!div class="checklist"]
+> * > [!NOTE] This is Note alert
+> * > [!WARNING] This is Warning alert
+> * > [!TIP] This is Tip alert
+> * > [!IMPORTANT] This is Important alert
+> * > [!CAUTION] This is Caution alert
+
+## Verify checkmark list in alert
+> [!NOTE]
+> abc I am a checkmark list
+> > [!div class="checklist"]
+> > * 
+> > * Create a resource group
+> > * Prepare the configuration
+> > * Create a virtual machine
+
+
 ## Verify each item support token
 > [!div class="checklist"]
 > * [!INCLUDE[ATA](../token/ATA.md)
