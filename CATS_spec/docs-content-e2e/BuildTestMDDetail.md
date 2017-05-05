@@ -147,8 +147,10 @@
 > [!div class="checklist"] 
 > * Next line is table with MD format
 > * |Row1|Row2|
-|---|---|
-|Column1|Column2|
+> * |---|---|
+> * |Column1|Column2|
+
+## Verify table contains checkmark list
 
 ## Verify each item support code snippet 
 ### For code sample 
@@ -167,6 +169,7 @@ using System;
  }
 }
 ```
+
 > * The previous line is code sample 
 
 ### For inline code
