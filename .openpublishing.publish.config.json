@@ -7,7 +7,7 @@
       "docset_name": "CATS_spec",
       "build_source_folder": "CATS_spec",
       "build_output_subfolder": "CATS_Document",
-      "locale": "en-us",
+      "locale": "zh-cn",
       "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -25,7 +25,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "url": "https://github.com/Microsoft/templates.docs.msft.zh-cn",
       "branch": "master",
       "branch_mapping": {}
     }
