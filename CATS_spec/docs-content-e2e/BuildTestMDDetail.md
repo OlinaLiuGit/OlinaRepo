@@ -5,10 +5,10 @@
 
 > [!div class="checklist"]
 > * 
-> * Create a resource group
-> * Prepare the configuration
-> * Create a virtual machine
-> * Configure the firewall
+> * 创建一个资源组
+> * 配置环境
+> * 创建虚拟机
+> * 配置防火墙
 > * Snapshot the virtual machine
 > * Run management tasks
 
@@ -50,14 +50,12 @@
 ## Verify lists item could nest order/unorder list
 
 > [!div class="checklist"]
-> * This is order list
+> * 
     1. Order list first line
     2. Order list second line
-> * This is under list with *
-    * unorder list first line with *
+> * * unorder list first line with *
     * unorder list second line with *
-> * This is unorder list with +
-    + unorder list first line with +
+> * + unorder list first line with +
     + unorder list second line with +
 
 ## Verify each item support link
@@ -66,21 +64,18 @@
 > * Internal Link: [Internal link BuildTest](BuildTest.md).
 > * Inline External Link: This is [Baidu](http://baidu.com/ "Baidu").
 > * Referenced external link: This is an [baidu][1] page.
-> * This is bookmark to [*Nest font format Bold and italics*](#nest-font-format-Bold-and-italics).
+> * This is bookmark to [*Nest font format Bold and italics*](#Nest font format Bold and italics).
 
 [1]: http://baidu.com/
 
 ## Verify each item support image
 
-![Inline image](../Images/IIS.png).
-![Inline image][3].
 > [!div class="checklist"]
-> * Inline image: ![Inline image](../Images/IIS.png).
-> * Reference image: ![Inline image][2].
+> * Inline image: [Inline image](..\Images\IIS.png).
+> * Reference image: [Inline image][2].
 > * External image: ![Image](http://pica.nipic.com/2008-01-09/200819134250665_2.jpg "Title")
 
-[2]: ../Images/IIS.png
-[3]: ../Images/IIS.png
+[2]: (..\Images\IIS.png)
 
 ## Verify each item support alert
 
@@ -95,81 +90,34 @@
     > This is Important alert
 > * > [!CAUTION] 
     > This is Caution alert
-
-## Verify each item support alert2
-> [!div class="checklist"]
-> * > [!NOTE] This is Note alert
-> * > [!WARNING] This is Warning alert
-> * > [!TIP] This is Tip alert
-> * > [!IMPORTANT] This is Important alert
-> * > [!CAUTION] This is Caution alert
-
-## Verify checkmark list in alert
-> [!NOTE]
-> abc I am a checkmark list
-> > [!div class="checklist"]
-> > * Create a resource group
-> > * Prepare the configuration
-> > * Create a virtual machine
-
-> [!WARNING]
-> abc I am a checkmark list
-> > [!div class="checklist"]
-> > * Create a resource group
-> > * Prepare the configuration
-> > * Create a virtual machine
-
-> [!TIP]
-> abc I am a checkmark list
-> > [!div class="checklist"]
-> > * Create a resource group
-> > * Prepare the configuration
-> > * Create a virtual machine
-
-> [!IMPORTANT]
-> abc I am a checkmark list
-> > [!div class="checklist"]
-> > * Create a resource group
-> > * Prepare the configuration
-> > * Create a virtual machine
-
-> [!CAUTION]
-> abc I am a checkmark list
-> > [!div class="checklist"]
-> > * Create a resource group
-> > * Prepare the configuration
-> > * Create a virtual machine
-
+    
 ## Verify each item support token
-> [!div class="checklist"]
-> * [!INCLUDE[ATA](../token/ATA.md)]
-> * For token
+TBD
 
 ## Verify each item support table
 
 > [!div class="checklist"] 
 > * Next line is table with MD format
-> * |Row1|Row2|<br>|---|---|<br>|Column1|Column2|
-
-## Verify table contains checkmark list
-| I am a table contains checkmark | Description|
-| ------------- | ----------- |
-| aaaa  |  bbbbb|
-|  > [!div class="checklist"] <br/> > * Check item 1 <br/> > * Check item 2 <br/> > * Check item 3 | 1. item1 <br> 2. Item2 <br> 3.    | 
-
+> * |Row1|Row2|
+    |Column1|Column2|
 
 ## Verify each item support code snippet 
 ### For code sample 
 
 > [!div class="checklist"] 
-> * This item contains a keyword `Hello word`
-> * Here is a code sample ```using System;```
-> * Here is another code sample
+> * The next line is code sample
 > * 
-```  
-using System; 
-using Microsoft.AnalysisServices.AdomdClient;
 ```
+using System;
+
+  public class Demo
+{
+ public void Main()
+ {
+        Console.WriteLine("Hello World");
+ }
+}
+> * The previous line is code sample 
 
 ### For inline code
 
@@ -178,21 +126,15 @@ using Microsoft.AnalysisServices.AdomdClient;
 > * For `inline code`.
 
 ### For code snippet
-> [!div class="checklist"] 
-> * The next line is code snippet
-> * [!Code-fsharp[snippetGetActions_fsharp](../CodeSnippets/Testcode.c)] 
+TBD
 
 ## Verify each item support video
 ### External Video 
-> [!div class="checklist"]
 > * The next line is external video
-> * > [!VIDEO https://sec.ch9.ms/ch9/f882/07d5474f-4235-4d89-90bc-ed008b98f882/WAMFAAnnimated_high.mp4] 
-> * > [!VIDEO https://www.youtube.com/embed/iyT1uILEI2U]
+> * [DemoVideo](https://sec.ch9.ms/ch9/4ce4/817a99cc-24da-4689-83a8-bd5aa1c54ce4/VSToolboxContainers_high.mp4)
 
 ### Internal video
-> [!div class="checklist"]
-> * The next line is external video
-> * [!VIDEO ../Videos/Testvideo.mp4] 
+TBD
 
 ## Verify items could support Mix embedded elements
 ### Mix Order list and external link
@@ -216,9 +158,7 @@ using Microsoft.AnalysisServices.AdomdClient;
 
 
 ### Checklist in table (MD systax)
-|Row1|Row2|  
-|--|--|
-|> [!div class="checklist"] <br> > * Next line is table with MD format|Column2|    
-
-
-
+|Row1|Row2|   
+|> [!div class="checklist"] 
+> * Next line is table with MD format
+|Column2|    

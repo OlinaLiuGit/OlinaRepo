@@ -13,7 +13,7 @@ The Next Steps contain below test case
 ### Next step with internal link(Current repo)
 
 > [!div class="nextstepaction"]
-> [Build Test](BuildTest.md)
+> [Build Test 中文测试](BuildTest.md)
 
 
 ### Next step with external link
