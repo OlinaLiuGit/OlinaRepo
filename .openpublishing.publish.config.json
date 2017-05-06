@@ -7,7 +7,7 @@
       "docset_name": "CATS_spec",
       "build_source_folder": "CATS_spec",
       "build_output_subfolder": "CATS_Document",
-      "locale": "en-us,zh-cn,ar-sa",
+      "locale": "zh-cn",
       "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
