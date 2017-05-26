@@ -12,6 +12,8 @@
 ### [Reference Namespace Testcases](docs-ui-template-e2e/Reference-Namespace.md)
 ### [Reference Class Testcases](docs-ui-template-e2e/Reference-Class.md)
 ## [Docs Content E2E Test](docs-content-e2e/Index.md)
+### [CATS Web Service](docs-content-e2/CATS-Web-Service.md)
+### [CATS API](docs-content-e2/CATS-API.md)
 ### [Breadcrumbs Test Cases](docs-content-e2e/Breadcrumb-Case.md)
 ### [Link Test Cases](docs-content-e2e/Link-Case.md)
 ### [Metadata Test Cases](docs-content-e2e/Metadata-Case.md)
