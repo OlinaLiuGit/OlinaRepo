@@ -48,6 +48,7 @@ User could call the web service either via UI tool or via code
         + Multiple input URLs, the input urls count of this web service is limited to 1000.
             - Format: ["URL1","UrL2","URL3"] 
 		    - For example
+    
     ```
     ["https://docs.microsoft.com/es-es/windows/manage/group-policies-for-enterprise-and-education-editions",https://docs.microsoft.com/en-us/windows-server-essentials/use/work-remotely-in-windows-server-essentials"]
     ```
@@ -66,6 +67,7 @@ User could call the web service either via UI tool or via code
 
 * Via code
     1. Define a class named `LinkServiceResponse` which contains Url (type is string), BrokenLinks (type is List<string>, broken link collection) and Success(type is string, a flag to determine if input url itself is a broken link)
+
     ```C#
     public class LinkServiceResponse
     {
@@ -75,6 +77,7 @@ User could call the web service either via UI tool or via code
     }
     ```
     2. Define a method to send httprequest with request url is http://10.213.224.35/, accepted header should be `application/json`. Sample code would be as following:
+    
     ```C#
     public static async Task<ConcurrentDictionary<string, LinkServiceResponse>> GetBrokenLinks(IList<string> inputUrls, string requestUrl)
         {
@@ -93,10 +96,12 @@ User could call the web service either via UI tool or via code
             return result;
         }
     }
-    ```
+```
+
     3. Specific input urls and get broken links
         Sample code would be as following:
-        ```C#
+
+```C#
         var requestUrl = "http://10.213.224.35/";
         var inputUrlList = new List<string>
         {
@@ -104,13 +109,14 @@ User could call the web service either via UI tool or via code
             "https://docs.microsoft.com/en-us/windows-server-essentials/use/work-remotely-in-windows-server-essentials"
         }; 
         var brokenLinks = GetBrokenLinks(inputUrlList, requestUrl).GetAwaiter().GetResult();
-        ```
+```
+
     4. Verify output result
         Output result would be as following:
         ![Call_Web_Service_Via_Code](../Images/Call_Web_Service_Via_Code.jpg)
     5. Completed Sample code:
 ```C#
-    		using Newtonsoft.Json;
+    	using Newtonsoft.Json;
 		using System;
 		using System.Collections.Concurrent;
 		using System.Collections.Generic;
