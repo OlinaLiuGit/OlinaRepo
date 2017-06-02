@@ -42,14 +42,15 @@ User could call the web service either via UI tool or via code
 1. Launch **PostMan** from Chrome (Open blank page in chrome, click Apps in the upper left corner then click PostMan)
 2. Entry access url mentioned in [Host](#host) part. Select *HttpMethod* as **Post**
 3. Click Body, select **raw** and **JSON(application/json)**
-4. In request body, input url list with **JSON** format. The input urls count is limited to 1000 <br>
+4. In request body, input url list with **JSON** format. The input urls count is limited to 1000
 Request header：
-
-|Field  |Value |
-|-------|-------|
-|Method |Post|
-|Request URL |{Host}/api/link/getbrokenlink <br> e.g. http://10.213.224.35/api/link/getbrokenlink |
-|Body|Option: raw, Json <br> Content: <ul><li>["Single URL"]</li><li>["URL1", "URL2","URL3"]</li></ul>|
+    - **Method**: Post
+    - **Request URL**: {Host}/api/link/getbrokenlink  e.g. http://10.213.224.35/api/link/getbrokenlink
+    - **Body**:
+        - Option: raw, Json 
+        - Content: 
+            - ["Single URL"]
+            - ["URL1", "URL2","URL3"]   
 5. Click **Send** to get output broken links
 ![Call Web Service Througn PostMan image](../Images/Call_Web_Service_Througn_PostMan.png)
 6. View Result
