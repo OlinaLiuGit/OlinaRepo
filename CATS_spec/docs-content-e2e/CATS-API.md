@@ -2,8 +2,7 @@
 In this article
 * [Contacts](#contacts)
 * [Overview](#overview)
-* [Functional Requirements](#requirement)
-* [Call Web Service via UI tool or code](#usage)
+* [Call CATS API via UI tool or code](#usage)
 
 ## <a id='contacts'></a> Contacts
 |Role |Name; Alias|
@@ -36,13 +35,19 @@ Get Postman installed
 
 
 1. Launch [PostMan](https://www.getpostman.com/) from Chrome (Open blank page in chrome, click Apps in the upper left corner then click PostMan)
+
 > [!Note] 
 > Neet to call via chrome PostMan app. CATS API does not support call web service via Windows PostMan app, it will return 401.2 - Unauthorized error message
 
 2. Enter request URL mentioned in [API](#api) part. Select *HttpMethod* as **Post**
 3. Click **Body**, select **raw** and **JSON(application/json)**
 4. In request body, input request body with **JSON** format. 
-    Request body (The CATS test cases list refer to [Get CATS test case list](#get-cats-test-cases-list))
+    Request body
+        - runName: Required. Any name of you CATS run, not exceed X characters
+		- createdBy: Required. Your alias, format: "{Domain}\\alias", it does not check the format of createdBy, but if it does not correct, After the CATS run is kick off, it could not filter the run which is created by yourself via check the "Only Show Runs Created By Me" on CATS.
+		- testCases: Required. The CATS test cases. It support input one or more CATS test cases. You can get all the CATS cases list and priority on [Get CATS test case list](#get-cats-test-cases-list). 
+		- testUrls: Required. The Urls you need to verify, it support input one or more test URLs. CATS will verify the each URL itself. 
+
     - Request body format
     <pre> 
     {
@@ -68,6 +73,108 @@ Get Postman installed
 ### <a id='get-cats-test-cases-list'></a> Get CATS test case list
 1. Launch PostMan from Chrome
 2. Enter request URL: http://csicesvr/Api/TestCase/ContentValidation 
-3. Select `HttpMethod` as **Get**
+3. Select **HttpMethod** as **Get**
 4. Click **Send**, the output is the CATS test case list.
     ![Get CATS Test Case List](../Images/Get_CATS_Test_Case_List.png)
+
+### Via Code call CAPS API
+1. Get Test cases list. Sample code code would be as following:
+
+    ```C#
+    var client = new HttpClient(handler);
+    client.BaseAddress = new Uri("http://csicesvr/");
+
+    static string[] ListTestCases(HttpClient client)
+        {
+            var responseBody = client.GetStringAsync("/api/testcase/ContentValidation").GetAwaiter().GetResult();
+            var testCases = JArray.Parse(responseBody).Select(x => x["name"].ToString()).ToArray();
+            return testCases;
+        }
+    ```
+
+2. Create CATS Run. Sample code would be as following:
+    
+    ```C#
+    static string CreateRun(HttpClient client, string runName, string createBy, string[] testCases, string[] testUrls)
+        {
+            var response = client.PostAsJsonAsync("/Api/ContentValidation/CreateRun_ForOPS",
+                new
+                {
+                    runName = runName,
+                    createBy = createBy,
+                    testCases = testCases,
+                    testUrls = testUrls
+                })
+                .GetAwaiter().GetResult();
+
+            var responseBody = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+
+            return JObject.Parse(responseBody)["runId"].ToString();
+        }
+    }
+    ```
+
+3. Completed Sample code:
+
+    ```C#
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Net.Http;
+    using Newtonsoft.Json.Linq;
+
+    namespace CATSApiClientSample
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                var handler = new HttpClientHandler();
+                handler.UseDefaultCredentials = true;
+                var client = new HttpClient(handler);
+                client.BaseAddress = new Uri("http://csicesvr/");
+
+                Console.WriteLine("All Test Cases:");
+                foreach (var c in ListTestCases(client))
+                    Console.WriteLine(c);
+
+                Console.WriteLine();
+                var runId = CreateRun(
+                    client: client,
+                    runName: "RunName",
+                    createBy: "YourAlias",
+                    testCases: new[] { "Broken TOC links", "Broken external links", "Broken internal links" },
+                    testUrls: new[] { "https://docs.microsoft.com/" });
+
+                Console.WriteLine($"Run [{runId}] created.");
+                Console.ReadLine();
+            }
+
+            static string[] ListTestCases(HttpClient client)
+            {
+                var responseBody = client.GetStringAsync("/api/testcase/ContentValidation").GetAwaiter().GetResult();
+                var testCases = JArray.Parse(responseBody).Select(x => x["name"].ToString()).ToArray();
+                return testCases;
+            }
+
+            static string CreateRun(HttpClient client, string runName, string createBy, string[] testCases, string[] testUrls)
+            {
+                var response = client.PostAsJsonAsync("/Api/ContentValidation/CreateRun_ForOPS",
+                    new
+                    {
+                        runName = runName,
+                        createBy = createBy,
+                        testCases = testCases,
+                        testUrls = testUrls
+                    })
+                    .GetAwaiter().GetResult();
+
+                var responseBody = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+
+                return JObject.Parse(responseBody)["runId"].ToString();
+            }
+        }
+    }
+    ```
