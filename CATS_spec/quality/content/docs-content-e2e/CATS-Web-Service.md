@@ -52,7 +52,7 @@ Request header：
             - ["Single URL"]
             - ["URL1", "URL2","URL3"]   
 5. Click **Send** to get output broken links
-![Call Web Service Througn PostMan image](../Images/Call_Web_Service_Througn_PostMan.png)
+![Call Web Service Through PostMan image](../Images/Call_Web_Service_Through_PostMan.png)
 6. View Result
     In response body, select Json format.
     - **Url**: the input URL        
