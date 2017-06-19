@@ -1,0 +1,19 @@
+#Markdown#
+###Text###
+*this text will be italic*
+**this text will be bold**
+**this text will be bold_this text will be italic_**
+###Color###
+* Red
+* Green
+* Blue
+1. Blue
+2. Green
+3. Red
+| left-align | center-align | right-align |
+|:----------- |:-------------:|---------:|
+| col 3 is    | some code     | $1600    |
+| col 2 is    | some code     | $1500    |
+| col 1 is    | some code     | $1400    |
+**this is a [link](www.baidu.com)**
+>区块引用
