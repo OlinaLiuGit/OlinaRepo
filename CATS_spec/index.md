@@ -1,1 +1,1 @@
-# Welcome to CATS_spec!
+# This is a index page!

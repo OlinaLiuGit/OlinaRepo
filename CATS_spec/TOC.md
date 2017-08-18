@@ -2,6 +2,7 @@
 ## [Content Quality](quality/content/index.md)
 ### [CATS User Help](quality/content/cats-user-help.md)
 ### [CATS Release Notes](quality/content/cats-release-notes.md)
+### [CATS Help Document](quality/content/CATSHelpDocument/CATS-help-document.md)
 ### [Docs Content Automation (CATS)](quality/content/docs-content-e2e/Index.md)
 #### [CATS Web Service](quality/content/docs-content-e2e/CATS-Web-Service.md)
 #### [CATS API](quality/content/docs-content-e2e/CATS-API.md)
@@ -36,3 +37,17 @@
 ### [Spec docs](specdocs/NewRepo.md)
 ## Reference
 ### [reference](reference.md)
+
+## [CATS E2E Test Cases](TestCases/index.md)
+### [TOC cases](TestCases/TOC-Cases/index.md)
+#### [Dup TOC 1](TestCases/TOC-Cases/BrokenTOC-dupTest.md)
+#### [TOC - 404](TestCases/TOC-Cases/inde.md)
+#### [TOC - Invalid host](https://review.docs.microsoft.com0000/en-us/azure/)
+#### [TOC - invalid format](ttps://review.docs.microsoft.com/en-us/azure/)
+#### [TOC test](TestCases/TOC-Cases/TOCTest.md)
+##### [Dup TOC 2](TestCases/TOC-Cases/BrokenTOC-dupTest.md)
+#### [Dup TOC 3](TestCases/TOC-Cases/BrokenTOC-dupTest.md)
+
+## [Table Cases](TestCases/Table-Cases/index.md)
+### [Empty row/column](TestCases/Table-Cases/Empty-Row-or-Column.md)
+### [Empty cells](TestCases/Table-Cases/Empty-Cells.md)
