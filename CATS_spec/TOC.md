@@ -3,6 +3,8 @@
 ### [CATS User Help](quality/content/cats-user-help.md)
 ### [CATS Release Notes](quality/content/cats-release-notes.md)
 ### [CATS Help Document](quality/content/docs-content-e2e/CATSHelpDocuments/CATS-help-document.md)
+#### [FAQ about CATS](quality/content/docs-content-e2e/CATSHelpDocuments/FAQ.md)
+#### [Quick reference of CATS issues](quality/content/docs-content-e2e/CATSHelpDocuments/Quick-ref-of-CATS-issues.md)
 ### [Docs Content Automation (CATS)](quality/content/docs-content-e2e/Index.md)
 #### [CATS Web Service](quality/content/docs-content-e2e/CATS-Web-Service.md)
 #### [CATS API](quality/content/docs-content-e2e/CATS-API.md)
