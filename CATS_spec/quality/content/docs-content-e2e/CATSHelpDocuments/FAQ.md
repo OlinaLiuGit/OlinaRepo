@@ -1,7 +1,6 @@
 # Q&A about CATS
 
-## FAQ: 
-### About CATS run
+## About CATS run
 
 **<font color='red'>Q:</font>** Which Docsets should I select when using run options “Provide Docsets”? <br/>
 **<font color='green'>A:</font>** The Docset name is the value of metadata "search.ms_docsetname" of the articles that you want to test. You can follow below steps to get Docset name.
@@ -17,7 +16,7 @@
 **<font color='red'>Q:</font>** Can I been notified once my test run has completed?<br/>
 **<font color='green'>A:</font>** Yes, CATS support to notify user through email after the run completed. You just need to check "Send Report Email after Run Completed" on "3 Preview Test Run" page of create run wizard when you kick off CATS run.
  
-### About CATS run report
+## About CATS run report
 **<font color='red'>Q:</font>** What actions should I supposed to take on the issues cats reported?
 <br/>
 **<font color='green'>A:</font>** It is suggest user to fix P0 & P1 cases before content release, the P2 cases is low impact, should fix after release. The priority of cases and actions propose see below
