@@ -1,5 +1,6 @@
 # Quality
 ## [Content Quality](quality/content/index.md)
+### [BrokenLinkTest](quality/content/BrokenLinkTest.md)
 ### [CATS User Help](quality/content/cats-user-help.md)
 ### [CATS Release Notes](quality/content/cats-release-notes.md)
 ### [Docs Content Automation (CATS)](quality/content/docs-content-e2e/Index.md)
