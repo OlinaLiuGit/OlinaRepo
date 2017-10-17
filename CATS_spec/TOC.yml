@@ -56,6 +56,7 @@
     items:
     - name: Docs Template Automation
       href: quality/engineering/docs-ui-template-e2e/index.md
+      expanded: true
       items:
       - name: Common Testcases
         href: quality/engineering/docs-ui-template-e2e/Common.md
@@ -82,6 +83,7 @@
     items:
     - name: Spec docs
       href: specdocs/NewRepo.md
+      expanded: true
   - name: Reference
     items:
     - name: reference
