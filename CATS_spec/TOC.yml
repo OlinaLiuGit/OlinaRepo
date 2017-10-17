@@ -2,6 +2,7 @@
   items:
   - name: Content Quality
     href: quality/content/index.md
+    expanded: true
     items:
     - name: CATS User Help
       href: quality/content/cats-user-help.md
@@ -9,5 +10,5 @@
       href: quality/content/cats-release-notes.md
     - name: CATS Help Document
       href: quality/content/docs-content-e2e/CATSHelpDocuments/CATS-help-document.md
-      expanded: true
+      
       
