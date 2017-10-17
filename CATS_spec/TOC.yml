@@ -9,6 +9,7 @@
       href: quality/content/cats-release-notes.md
     - name: CATS Help Document
       href: quality/content/docs-content-e2e/CATSHelpDocuments/CATS-help-document.md
+      expanded: true
       items:
       - name: FAQ about CATS
         href: quality/content/docs-content-e2e/CATSHelpDocuments/FAQ.md
