@@ -2,7 +2,6 @@
   items:
   - name: Content Quality
     href: quality/content/index.md
-    expanded: true
     items:
     - name: CATS User Help
       href: quality/content/cats-user-help.md
