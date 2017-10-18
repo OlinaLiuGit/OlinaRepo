@@ -1,3 +1,9 @@
+---
+nodes_to_expand:
+ -quality/content
+ -specdocs
+---
+
 # Quality
 ## [Content Quality](quality/content/index.md)
 ### [CATS User Help](quality/content/cats-user-help.md)
