@@ -1,6 +1,6 @@
 ---
 nodes_to_expand:
-    - CATS_Document/quality/engineering
+    - /CATS_Document/quality/engineering
 ---
 
 # Docs Content Test
