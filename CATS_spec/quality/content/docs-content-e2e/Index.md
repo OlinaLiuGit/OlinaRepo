@@ -1,6 +1,6 @@
 ---
 nodes_to_expand:
--/quality/content/index.md
+-/quality/content/index
 ---
 
 # Docs Content Test

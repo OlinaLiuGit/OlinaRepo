@@ -1,9 +1,3 @@
----
-nodes_to_expand:
- -/quality/content/index.md
- -/specdocs/NewRepo.md
----
-
 # Quality
 ## [Content Quality](quality/content/index.md)
 ### [CATS User Help](quality/content/cats-user-help.md)
