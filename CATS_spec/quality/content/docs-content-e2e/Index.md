@@ -1,6 +1,6 @@
 ---
 nodes_to_expand:
-    - /docs-content-e2e/Index
+    - specdocs/NewRepo.md
 ---
 
 # Docs Content Test
