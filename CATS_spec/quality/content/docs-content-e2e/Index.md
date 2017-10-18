@@ -1,6 +1,6 @@
 ---
 nodes_to_expand:
-    - specdocs/NewRepo.md
+    - specdocs/NewRepo
 ---
 
 # Docs Content Test
