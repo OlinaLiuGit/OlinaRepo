@@ -1,6 +1,6 @@
 ---
 nodes_to_expand:
-    - quality/engineering/docs-ui-template-e2e
+    - ../../engineering/docs-ui-template-e2e/index
 ---
 
 # Docs Content Test
