@@ -1,6 +1,7 @@
 ---
 nodes_to_expand:
-    - /CATS_Document/quality/engineering/docs-ui-template-e2e/?branch=ExpandTOC
+    - /CATS_Document/quality/engineering/docs-ui-template-e2e
+    - /CATS_Document/quality/engineering/ops-build-e2e
 ---
 
 # Docs Content Test
