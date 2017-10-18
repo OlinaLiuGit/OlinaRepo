@@ -1,7 +1,7 @@
 ---
 nodes_to_expand:
- -/quality/content/index
- -/specdocs/NewRepo
+ -/quality/content/index.md
+ -/specdocs/NewRepo.md
 ---
 
 # Quality
