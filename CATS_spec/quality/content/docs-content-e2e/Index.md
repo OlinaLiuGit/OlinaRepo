@@ -1,6 +1,7 @@
 ---
 nodes_to_expand:
     - /CATS_Document/quality/engineering/docs-ui-template-e2e/common
+    - /CATS_Document/quality/engineering/ops-build-e2e/dependencies
 ---
 
 # Docs Content Test
