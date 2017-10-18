@@ -1,6 +1,6 @@
 ---
 nodes_to_expand:
-    - specdocs/NewRepo
+    - quality/engineering/docs-ui-template-e2e
 ---
 
 # Docs Content Test
