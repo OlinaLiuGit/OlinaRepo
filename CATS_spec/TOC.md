@@ -1,5 +1,6 @@
 # Quality
 ## [Hubpage Test](quality/index.md)
+## [Hubpage Test](quality/LandingPage.yml)
 ## [Content Quality](quality/content/index.md)
 ### [BrokenLinkTest](quality/content/BrokenLinkTest.md)
 ### [CATS User Help](quality/content/cats-user-help.md)
