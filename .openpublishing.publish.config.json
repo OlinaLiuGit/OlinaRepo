@@ -1,14 +1,13 @@
 {
   "build_entry_point": "docs",
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
       "docset_name": "CATS_spec",
       "build_source_folder": "CATS_spec",
       "build_output_subfolder": "CATS_Document",
-      "locale": "zh-cn",
+      "locale": "en-us",
       "monikers": [],
+      "moniker_ranges": [],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -30,5 +29,7 @@
       "branch_mapping": {}
     }
   ],
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false
 }
