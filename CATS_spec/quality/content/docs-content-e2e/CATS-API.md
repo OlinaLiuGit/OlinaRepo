@@ -1,8 +1,8 @@
 # CATS API
 
 ## Get the CATS Portal access token in PostMan
-You can download PostMan App at: https://www.getpostman.com/
-1. In postman, select **Authorization** 
+If you want to call CATS API, you need to get the access token to CATS at first. 
+1. In postman App(You can download PostMan App at: https://www.getpostman.com/), select **Authorization** 
 2. Choose **Type: OAuth 2.0**
 3. **Get New Access Token**, and in pop-up dialog fill like following, and request a new token
 	- **Token Name**: whatever
@@ -24,10 +24,10 @@ You can download PostMan App at: https://www.getpostman.com/
 Triggering CATS run via call CATS API
 
 ### API
-* **Input parameters**: runname, createdBy, testCaseIds and testUrls
-* **Output**: RunId in CATS
-* **Request URL**: https://contentqacats-dev.azurewebsites.net/api/testcase/ContentValidation/CreateRun_ForOPS
-* **HttpMethod**: Post
+- **Input parameters**: runname, createdBy, testCaseIds and testUrls
+- **Output**: RunId in CATS
+- **Request URL**: https://contentqacats-dev.azurewebsites.net/api/testcase/ContentValidation/CreateRun_ForOPS
+- **HttpMethod**: Post
 
 ### Via PostMan call CAPS API
 1. On **Authentication** section of PostMan, in the dropdown list **Available Tokens** chose the one you created for CATS portal access.
@@ -52,7 +52,7 @@ Triggering CATS run via call CATS API
 	<pre>{
 	"runName":"{your run name}",
 	"createdBy":"{Domain\\alias}",
-	"testCaseIds": "CATS test CaseId1, CATS test CaseId2, …",
+	"testCaseIds": "Id1, Id2, …",
 	"testUrls":["URL1", "URL2"],
 	"waitTimeMin": "Minute need to wait before CATS been trigger after create ",
 	"isSendMail": "true/false",
