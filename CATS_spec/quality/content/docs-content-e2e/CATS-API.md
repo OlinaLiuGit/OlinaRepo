@@ -8,7 +8,7 @@ If you want to call CATS API, you need to get the access token to CATS at first.
 	- **Token Name**: whatever
 	- **Grant type**: Client Credentials
 	- **Access Token URL**: https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/oauth2/token
-	- **Client ID**: ******
+	- **Client ID**: f85c7238-6754-424b-9a89-6345648a49ed
 	- **Client Secret**: ******
 	- **Scope**: Optional
 	- **Client Authentication**: Optional
@@ -17,7 +17,7 @@ If you want to call CATS API, you need to get the access token to CATS at first.
 6. **Preview Request** and click **Send** to make your request, if authentication is successful, the API shows a 200/OK response.
 
 > [!Note] 
-> For security, we could not publish the Client ID and Client Secret, if you need CATS Portal access token, you can access [CATS Support](catssupport@microsoft.com) to get them. 
+> For security, we could not publish the **Client Secret**, if you need call CATS Portal API, you can contact [CATS Support](catssupport@microsoft.com) to get it. 
 
 ## CATS API for triggering run
 ### Goals
@@ -43,7 +43,8 @@ Triggering CATS run via call CATS API
         }</pre>
 
     CATS API trigger run input parameters:
-    |Field    |Required |Format   |Comment  |
+    
+	|Field    |Required |Format   |Comment  |
 	|---------|:--------:|---------|---------|
 	|runName  |Y| string  |<=32 chars|
 	|createdBy|Y| Domain\\alias |         |
@@ -167,9 +168,9 @@ namespace CATSApiSample
 	static AuthenticationResult GetS2SAccessToken()
 	{
 		var Authority = "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47";
-		var ClientId = "xxxxxx";
+		var ClientId = "f85c7238-6754-424b-9a89-6345648a49ed";
 		var ClientSecret = "xxxxxx";
-		var Resource = "xxxxxx";
+		var Resource = "f85c7238-6754-424b-9a89-6345648a49ed";
 
 		var clientCredential = new ClientCredential(ClientId, ClientSecret);
 		AuthenticationContext context = new AuthenticationContext(Authority, false);
