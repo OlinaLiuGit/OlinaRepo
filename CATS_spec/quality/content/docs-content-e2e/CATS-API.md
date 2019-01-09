@@ -42,11 +42,11 @@ Triggering CATS run via call CATS API
 	|---------|:--------:|---------|---------|
 	|runName  |Y| string  |<=32 chars|
 	|createdBy|Y| Domain\\alias |         |
-	|testCaseIds |Y|  int array(split with ',' if multiple)       | Support multiple testcases, you can get all the CATS cases info from [Get CATS test case API](#get-cats-test-case-api)  <br> <ul><li>Test case - "IsRequired: true" is required</li><li>Only active cases is allowed - "IsActive: true" </li> </ul>     |
-	|testUrls    |Y|  Standard http(s) url, support docs only now(split with ',' if multiple) |   Support multiple urls      |
+	|testCaseIds |Y|  int array(split with ',' if multiple) | Support multiple testcases, you can get all the CATS cases info from [Get CATS test case API](#get-cats-test-case-api)  <br> <ul><li>Test case - "IsRequired: true" is required</li><li>Only active cases is allowed - "IsActive: true" </li> </ul>     |
+	|testUrls    |Y|  Standard http(s) url, support docs only now |   Support multiple urls(split with ',' if multiple)    |
 	|waitTimeMin  |N| int  |<=30(min)|
 	|isSendMail   |N| Bool  |true/false|
-	|notification_Subscribers|N|string|Email list for notification|
+	|notification_Subscribers|N|string|Email list for notification(split with ',' if multiple)|
 
 	- Request body format
 	<pre>{
