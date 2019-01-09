@@ -42,7 +42,7 @@ Triggering CATS run via call CATS API
 	|---------|:--------:|---------|---------|
 	|runName  |Y| string  |<=32 chars|
 	|createdBy|Y| Domain\\alias |         |
-	|testCaseIds |Y|  string(split with ',' if multiple)       | Support multiple testcases, you can get all the CATS cases info from [Get CATS test case list](#get-test-case-api)  <br> <ul><li>Test case - "IsRequired: true" is required</li><li>Only active cases is allowed - "IsActive: true" </li> </ul>     |
+	|testCaseIds |Y|  string(split with ',' if multiple)       | Support multiple testcases, you can get all the CATS cases info from [Get CATS test case API](#get-cats-test-case-api)  <br> <ul><li>Test case - "IsRequired: true" is required</li><li>Only active cases is allowed - "IsActive: true" </li> </ul>     |
 	|testUrls    |Y|  Standard http(s) url, support docs only now |   Support multiple urls      |
 	|waitTimeMin  |N| string  |<=30(min)|
 	|isSendMail   |N| Bool  |true/false|
@@ -72,19 +72,19 @@ Triggering CATS run via call CATS API
 	
 4. Click **Send**, runid and resultUrl(report page url) will returned
 
-## Get test case API
+## Get CATS test case API
 Get CATS test case API:
 - **HttpMethod**: Get
 - **Request URL**: 
 	- Content Calidation: https://contentqacats.azurewebsites.net/Api/TestCase/ContentValidation
 	- Protocol Validation: https://contentqacats.azurewebsites.net/Api/TestCase/ProtocolValidation
 
-## Get Example link API
+## Get Example link white list API
 Get Example link white list API:
 - **HttpMethod**: Get
 - **Request URL**: https://contentqacats.azurewebsites.net/api/examplelink
 
-## Get cookie API
+## Get Docs site cookie API
 Get Docs site cookie API:
 - **HttpMethod**: Get
 - **Request URL**: https://contentqacats.azurewebsites.net/api/cookie
