@@ -26,19 +26,24 @@ Triggering CATS run via call CATS API
 ### API
 - **Input parameters**: runname, createdBy, testCaseIds and testUrls
 - **Output**: RunId in CATS
-- **Request URL**: https://contentqacats-dev.azurewebsites.net/api/testcase/ContentValidation/CreateRun_ForOPS
-- **HttpMethod**: Post
+- **Request header**
+    - **Method**: Post
+    - **Request URL**: https://contentqacats-dev.azurewebsites.net/api/testcase/ContentValidation/CreateRun_ForOPS
+    - **Body**:
+        - Option: raw, Json
+        - Request body format
+        <pre>{
+        "runName":"{your run name}",
+        "createdBy":"{Domain\\alias}",
+        "testCaseIds": "Id1, Id2, …",
+        "testUrls":["URL1", "URL2"],
+        "waitTimeMin": "Minute need to wait before CATS been trigger after create",
+        "isSendMail": "true/false",
+        "notification_Subscribers":["NotificationEmail1","NotificationEmail2"]
+        }</pre>
 
-### Via PostMan call CAPS API
-1. On **Authentication** section of PostMan, in the dropdown list **Available Tokens** chose the one you created for CATS portal access.
-2. Enter request URL
-    - **HttpMethod**: *Post*
-    - **URL**: mentioned in [API](#api) part
-3. Enter request body
-    - Click **Body**, select **raw** and **JSON(application/json)**
-    - Input Request body with **JSON** format
-    
-	|Field    |Required |Format   |Comment  |
+    CATS API trigger run input parameters:
+    |Field    |Required |Format   |Comment  |
 	|---------|:--------:|---------|---------|
 	|runName  |Y| string  |<=32 chars|
 	|createdBy|Y| Domain\\alias |         |
@@ -48,17 +53,14 @@ Triggering CATS run via call CATS API
 	|isSendMail   |N| Bool  |true/false|
 	|notification_Subscribers|N|string|Email list for notification(split with ',' if multiple)|
 
-	- Request body format
-	<pre>{
-	"runName":"{your run name}",
-	"createdBy":"{Domain\\alias}",
-	"testCaseIds": "Id1, Id2, …",
-	"testUrls":["URL1", "URL2"],
-	"waitTimeMin": "Minute need to wait before CATS been trigger after create ",
-	"isSendMail": "true/false",
-	"notification_Subscribers":["NotificationEmail1","NotificationEmail2"]
-	}</pre>
-	
+### Via PostMan call CAPS API
+1. On **Authentication** section of PostMan, in the dropdown list **Available Tokens** chose the one you created for CATS portal access.
+2. Enter request header
+    - **HttpMethod**: *Post*
+    - **Request URL**: https://contentqacats-dev.azurewebsites.net/api/testcase/ContentValidation/CreateRun_ForOPS
+3. Enter request body
+    - Click **Body**, select **raw** and **JSON(application/json)**
+    - Input Request body with **JSON** format    
 	- Request body example
 	<pre>{
 	"runName":"testOps",
@@ -73,20 +75,20 @@ Triggering CATS run via call CATS API
 4. Click **Send**, runid and resultUrl(report page url) will returned
 
 ## Get CATS test case API
-Get CATS test case API:
-- **HttpMethod**: Get
+**Request header**
+- **Method**: Get
 - **Request URL**: 
 	- Content Calidation: https://contentqacats.azurewebsites.net/Api/TestCase/ContentValidation
 	- Protocol Validation: https://contentqacats.azurewebsites.net/Api/TestCase/ProtocolValidation
 
 ## Get Example link white list API
-Get Example link white list API:
-- **HttpMethod**: Get
+**Request header**
+- **Method**: Get
 - **Request URL**: https://contentqacats.azurewebsites.net/api/examplelink
 
 ## Get Docs site cookie API
-Get Docs site cookie API:
-- **HttpMethod**: Get
+**Request header**
+- **Method**: Get
 - **Request URL**: https://contentqacats.azurewebsites.net/api/cookie
 
 ## Via Code call CAPS API
