@@ -1,9 +1,5 @@
 # CATS API
 
-## CATS API List
-
-
-
 ## Get the CATS Portal access token in PostMan
 You can download PostMan App at: https://www.getpostman.com/
 1. In postman, select **Authorization** 
