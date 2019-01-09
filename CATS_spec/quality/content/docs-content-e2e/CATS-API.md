@@ -1,10 +1,32 @@
 # CATS API
 
-## Get the CATS Portal access token in PostMan
+## Triggering content validation run via API
+
+- **Input parameters**: runname, createdBy, testCaseIds and testUrls
+- **Output**: RunId in CATS
+- **Request header**
+    - **Method**: Post
+    - **Request URL**: https://contentqacats.azurewebsites.net/api/ContentValidation/CreateRun_ForOPS
+
+    **Parameters details**:
+    
+	|Field    |Required |Format   |Comment  |
+	|---------|:--------:|---------|---------|
+	|runName  |Y| string  |<=32 chars|
+	|createdBy|Y| Domain\\alias |         |
+	|testCaseIds |Y|  int array(split with ',' if multiple) | Support multiple testcases, you can get all the CATS cases info from [Get CATS test case API](#get-cats-test-case-info)  <br> <ul><li>Test case - "IsRequired: true" is required</li><li>Only active cases is allowed - "IsActive: true" </li> </ul>     |
+	|testUrls    |Y|  Standard http(s) url, support docs only now |   Support multiple urls(split with ',' if multiple)    |
+	|waitTimeMin  |N| int  |<=30(min)|
+	|isSendMail   |N| Bool  |true/false|
+	|notification_Subscribers|N|string|Email list for notification(split with ',' if multiple)|
+
+### Step1: Get the CATS Portal access token in PostMan
+
 If you want to call CATS API, you need to get the access token to CATS at first. 
 1. In postman App(You can download PostMan App at: https://www.getpostman.com/), select **Authorization** 
+![Get Token](../Images/GetToken.png)
 2. Choose **Type: OAuth 2.0**
-3. **Get New Access Token**, and in pop-up dialog fill like following, and request a new token
+3. **Get New Access Token**, and in pop-up dialog fill like following, then click **Request Token** to request a new token
 	- **Token Name**: whatever
 	- **Grant type**: Client Credentials
 	- **Access Token URL**: https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/oauth2/token
@@ -12,88 +34,46 @@ If you want to call CATS API, you need to get the access token to CATS at first.
 	- **Client Secret**: ******
 	- **Scope**: Optional
 	- **Client Authentication**: Optional
-4. Close the result windows, in the dropdown list **Available Tokens** choose the one you just create.
-5. Add Authorization to **Request Headers**
-6. **Preview Request** and click **Send** to make your request, if authentication is successful, the API shows a 200/OK response.
+    ![Get Token](../Images/RequestToken.png)
+4. After token request succeed, in the **MANAGER ACCESS TOKENS** windows, click **Use Token**. Screenshot as below:
+![Use Token](../Images/UseToken.png)
+
 
 > [!Note] 
 > For security, we could not publish the **Client Secret**, if you need call CATS Portal API, you can contact [CATS Support](catssupport@microsoft.com) to get it. 
 
-## CATS API for triggering run
-### Goals
-Triggering CATS run via call CATS API
+### Step2: Fill request body, send request and get response
+After authoried in step1, input your request body with formatted json under section “Body” and send request
+Request body:
+- Option: raw, Json
+- Request body format
+    <pre>{
+    "runName":"{your run name}",
+    "createdBy":"{Domain\\alias}",
+    "testCaseIds": "Id1, Id2, …",
+    "testUrls":["URL1", "URL2"],
+    "waitTimeMin": "Minute need to wait before CATS been trigger after create",
+    "isSendMail": "true/false",
+    "notification_Subscribers":["NotificationEmail1","NotificationEmail2"]
+    }</pre>
 
-### API
-- **Input parameters**: runname, createdBy, testCaseIds and testUrls
-- **Output**: RunId in CATS
-- **Request header**
-    - **Method**: Post
-    - **Request URL**: https://contentqacats-dev.azurewebsites.net/api/testcase/ContentValidation/CreateRun_ForOPS
-    - **Body**:
-        - Option: raw, Json
-        - Request body format
-        <pre>{
-        "runName":"{your run name}",
-        "createdBy":"{Domain\\alias}",
-        "testCaseIds": "Id1, Id2, …",
-        "testUrls":["URL1", "URL2"],
-        "waitTimeMin": "Minute need to wait before CATS been trigger after create",
-        "isSendMail": "true/false",
-        "notification_Subscribers":["NotificationEmail1","NotificationEmail2"]
-        }</pre>
+    Screenshot for an example:
+    ![Trigger run](../Images/CreateRun.png)
 
-    CATS API trigger run input parameters:
-    
-	|Field    |Required |Format   |Comment  |
-	|---------|:--------:|---------|---------|
-	|runName  |Y| string  |<=32 chars|
-	|createdBy|Y| Domain\\alias |         |
-	|testCaseIds |Y|  int array(split with ',' if multiple) | Support multiple testcases, you can get all the CATS cases info from [Get CATS test case API](#get-cats-test-case-api)  <br> <ul><li>Test case - "IsRequired: true" is required</li><li>Only active cases is allowed - "IsActive: true" </li> </ul>     |
-	|testUrls    |Y|  Standard http(s) url, support docs only now |   Support multiple urls(split with ',' if multiple)    |
-	|waitTimeMin  |N| int  |<=30(min)|
-	|isSendMail   |N| Bool  |true/false|
-	|notification_Subscribers|N|string|Email list for notification(split with ',' if multiple)|
 
-### Via PostMan call CAPS API
-1. On **Authentication** section of PostMan, in the dropdown list **Available Tokens** chose the one you created for CATS portal access.
-2. Enter request header
-    - **HttpMethod**: *Post*
-    - **Request URL**: https://contentqacats-dev.azurewebsites.net/api/testcase/ContentValidation/CreateRun_ForOPS
-3. Enter request body
-    - Click **Body**, select **raw** and **JSON(application/json)**
-    - Input Request body with **JSON** format    
-	- Request body example
-	<pre>{
-	"runName":"testOps",
-	"createdBy":"Redmond\\APEXTest",
-	"testCaseIds": "22,3",
-	"testUrls":["https://docs.microsoft.com/en-us/", "https://docs.microsoft.com/en-us/windows/"],
-	"waitTimeMin": "0",
-	"isSendMail": "true",
-	"notification_Subscribers":["APEXTest@microsoft.com"]
-	}</pre>
-	
-4. Click **Send**, runid and resultUrl(report page url) will returned
-
-## Get CATS test case API
+## Get CATS test case info
 **Request header**
 - **Method**: Get
-- **Request URL**: 
-	- Content Calidation: https://contentqacats.azurewebsites.net/Api/TestCase/ContentValidation
-	- Protocol Validation: https://contentqacats.azurewebsites.net/Api/TestCase/ProtocolValidation
+- **Request URL**: https://contentqacats.azurewebsites.net/Api/TestCase/ContentValidation
 
-## Get Example link white list API
+
+## Get Example link white list
 **Request header**
 - **Method**: Get
 - **Request URL**: https://contentqacats.azurewebsites.net/api/examplelink
 
-## Get Docs site cookie API
-**Request header**
-- **Method**: Get
-- **Request URL**: https://contentqacats.azurewebsites.net/api/cookie
-
-## Via Code call CAPS API
-Sample code for call CATS test case API and call create run API:
+## Code sample of CATS API 
+Sample code as below:
 
 ```C#
 using Newtonsoft.Json.Linq;
@@ -117,10 +97,8 @@ namespace CATSApiSample
 		var client = CreateClient(new Uri("https://contentqacats-dev.azurewebsites.net/"));
 
 		//Get test cases
-		Console.WriteLine("All Test Cases:");
-		foreach (var c in ListTestCases(client))
-			Console.WriteLine(c);
-
+        var activedTCIds = ListTestCases(client);
+		
 		//Create run
 		client.DefaultRequestHeaders.Accept.Clear();
 		client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -169,7 +147,7 @@ namespace CATSApiSample
 	{
 		var Authority = "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47";
 		var ClientId = "f85c7238-6754-424b-9a89-6345648a49ed";
-		var ClientSecret = "xxxxxx";
+		var ClientSecret = "xxxxxx"; //Contact CATS Support(catssupport@microsoft.com) to get ClientSecret
 		var Resource = "f85c7238-6754-424b-9a89-6345648a49ed";
 
 		var clientCredential = new ClientCredential(ClientId, ClientSecret);
